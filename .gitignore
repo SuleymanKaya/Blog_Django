@@ -1,0 +1,8 @@
+# Git tarafından takip edilmesini istemediğimiz dosyalar buraya yazılır.
+__pycache__
+db.sqlite3
+.vscode
+media
+.env
+logs
+.idea

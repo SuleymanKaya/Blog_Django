@@ -1,0 +1,22 @@
+<div class="card">
+    {% if request.user.is_authenticated %}
+    <div class="card-header">
+    <b> Menü </b>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><a href="{% url 'profilGuncelle' %}"> Profili Düzenle </a></li>
+        <li class="list-group-item"><a href="{% url 'sifreDegistirme' %}"> Şifre Değiştir </a></li>
+        <li class="list-group-item"><a href="{% url 'yaziEkle' %}"> Yazı Ekle </a></li>
+        <li class="list-group-item"> <a href="{% url 'yazilarim' %}"> Yazilarim </a></li>
+        <li class="list-group-item"><a href="{% url 'cikis' %}"> Çıkış Yap </a></li>
+    </ul>
+    {% else %}
+    <div class="card-header">
+    Bize Katıl
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><a href="{% url 'giris' %}" class="btn btn-primary" role="button"> Giriş Yap </a></li>
+        <li class="list-group-item"><a href="{% url 'kayit' %}" class="btn btn-success" role="button"> Yeni Hesap Oluştur </a></li>
+    </ul>
+    {% endif %}
+</div>
